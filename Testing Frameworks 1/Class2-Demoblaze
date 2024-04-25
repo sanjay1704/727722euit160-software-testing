@@ -33,7 +33,9 @@ public class ApptestXL
         Thread.sleep(3000);
         driver.findElement(By.xpath("//*[@id=\'tbodyid\']/div[2]/div/a")).click();
         Thread.sleep(5000);
-        
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+        Thread.sleep(3000);
         driver.findElement(By.xpath("//*[@id=\'cartur\']")).click();
         Thread.sleep(7000);
         String a = driver.findElement(By.xpath("//*[@id=\'tbodyid\']/tr/td[2]")).getText();
